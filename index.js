@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
 
+app.get("/",(req,res)=>{
+  res.send("Server is working")
+})
+
 app.use("/home", (req, res) => {
-  res.send("Hello from the 2nd server!");
+  res.send("Hello from the server!");
 });
 
 app.listen(3000, () => {
